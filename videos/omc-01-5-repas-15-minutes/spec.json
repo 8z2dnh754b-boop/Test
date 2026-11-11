@@ -1,0 +1,14 @@
+{
+  "fichier": "omc-01-5-repas-15-minutes.mp4",
+  "police": "inter",
+  "cartes": [
+    {"titre": "5 repas rapides et pas chers", "phrases": ["Prêts en 15 minutes."], "recherche": "family dinner table food"},
+    {"titre": "1. Omelette aux pommes de terre", "phrases": ["Des œufs, une pomme de terre, un oignon.", "15 minutes à la poêle."], "recherche": "omelette frying pan"},
+    {"titre": "2. Riz sauté", "phrases": ["Le riz de la veille, 2 œufs, des petits pois.", "10 minutes à la poêle."], "recherche": "fried rice wok"},
+    {"titre": "3. Pâtes au thon", "phrases": ["Pâtes, thon en boîte, coulis de tomate.", "La sauce est prête pendant que les pâtes cuisent."], "recherche": "pasta tomato sauce cooking"},
+    {"titre": "4. Soupe express", "phrases": ["Carottes, pommes de terre, oignon.", "15 minutes de cuisson, puis on mixe."], "recherche": "vegetable soup blender carrots"},
+    {"titre": "5. Croque-monsieur au four", "phrases": ["Pain de mie, jambon, fromage.", "10 minutes au four."], "recherche": "toasted ham cheese sandwich"},
+    {"titre": "L'astuce", "phrases": ["Garde toujours au placard :", "des œufs, du riz, des pâtes et des conserves."], "recherche": "pantry shelf rice pasta jars"},
+    {"titre": "Lequel tu fais ce soir ?", "phrases": ["Dis-le-moi en commentaire !", "Abonne-toi pour une idée chaque jour."], "recherche": "family eating dinner together"}
+  ]
+}
