@@ -480,7 +480,7 @@ def soft_dot(r, color=(255, 255, 255), a=255):
 def wrap(text, font, maxw):
     d = ImageDraw.Draw(Image.new("RGB", (1, 1)))
     lines, cur = [], ""
-    for w in text.split():
+    for w in text.split(" "):
         t = (cur + " " + w).strip()
         if d.textlength(t, font=font) <= maxw:
             cur = t
@@ -491,6 +491,8 @@ def wrap(text, font, maxw):
 
 
 def bubble(text, size, fg, bg, maxw=900, pad=(38, 22), radius=40, shadow=True, one_line=False):
+    for p in "!?:;":
+        text = text.replace(" " + p, "\u00a0" + p)
     f = ImageFont.truetype(FONT, size)
     if one_line:
         dd0 = ImageDraw.Draw(Image.new("RGB", (1, 1)))
@@ -629,3 +631,10 @@ def concat(parts, final, dur=60):
     subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-f", "concat", "-safe", "0", "-i", lst,
                     "-f", "lavfi", "-i", "anullsrc=r=44100:cl=stereo", "-map", "0:v", "-map", "1:a",
                     "-c:v", "copy", "-c:a", "aac", "-t", str(dur), "-movflags", "+faststart", final], check=True)
+
+
+def cover_fill(img, w, h):
+    s = max(w / img.width, h / img.height)
+    im = img.resize((int(img.width * s + 1), int(img.height * s + 1)), Image.BILINEAR)
+    x, y = (im.width - w) // 2, (im.height - h) // 2
+    return im.crop((x, y, x + w, y + h))
