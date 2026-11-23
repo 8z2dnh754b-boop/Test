@@ -5,3 +5,4 @@ __pycache__/
 videos/*/render/
 videos/*/photos/
 videos/*/clips/
+videos/*/*.png
