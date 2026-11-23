@@ -7,3 +7,4 @@ videos/*/photos/
 videos/*/clips/
 videos/*/*.png
 videos/*/*/*.jpg
+videos/carrousels/**/*.jpg
